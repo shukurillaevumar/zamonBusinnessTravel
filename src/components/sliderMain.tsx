@@ -105,7 +105,7 @@ export default function Slider() {
               </div>
 
               {/* Статистика */}
-              <div className="bg-white p-5 rounded-full w-1/2 absolute top-1/2 transform left-1/2 -translate-x-1/2 translate-y-80 z-10 max-2xl:w-full max-md:top-1/3 max-md:rounded-xl">
+              <div className="bg-white p-5 rounded-full w-1/2 absolute top-1/2 transform left-1/2 -translate-x-1/2 translate-y-80 z-10 max-2xl:w-full max-md:top-1/5 max-md:rounded-xl">
                 <div className="flex justify-between items-center flex-wrap max-md:gap-5">
                   {slide.stats.map((stat, statIndex) => (
                     <div
