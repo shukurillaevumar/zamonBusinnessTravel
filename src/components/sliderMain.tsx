@@ -9,6 +9,7 @@ import Antalia from "../../public/images/mainBackgroundImages/antaliya.jpg";
 import Turkey from "../../public/images/mainBackgroundImages/turkey.webp";
 import London from "../../public/images/mainBackgroundImages/london.jpg";
 import Button from "./button";
+import { Link } from "react-scroll";
 
 const slides = [
   {
@@ -101,11 +102,13 @@ export default function Slider() {
                 <h2 className="text-white text-6xl font-bold max-md:text-4xl">
                   {slide.cityName}
                 </h2>
-                <Button text="Go there" />
+                <Link to="about" smooth={true} duration={500}>
+                  <Button text="Go there" />
+                </Link>
               </div>
 
               {/* Статистика */}
-              <div className="bg-white p-5 rounded-full w-1/2 absolute top-1/2 transform left-1/2 -translate-x-1/2 translate-y-80 z-10 max-2xl:w-full max-md:top-1/5 max-md:rounded-xl">
+              <div className="bg-white p-5 rounded-full w-1/2 absolute top-1/2 transform left-1/2 -translate-x-1/2 translate-y-80 z-10 max-2xl:w-full max-md:top-1/3 max-md:rounded-xl max-md:p-2">
                 <div className="flex justify-between items-center flex-wrap max-md:gap-5">
                   {slide.stats.map((stat, statIndex) => (
                     <div
@@ -125,7 +128,9 @@ export default function Slider() {
                       </div>
                     </div>
                   ))}
-                  <Button text="Explore More" />
+                  <Link to="about" smooth={true} duration={500}>
+                    <Button text="Explore More" />
+                  </Link>
                 </div>
               </div>
             </div>

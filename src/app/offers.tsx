@@ -17,6 +17,7 @@ import { CarTaxiFront, Plane, Building, UsersRound } from "lucide-react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import Button from "@/components/button";
+import { Link } from "react-scroll";
 
 const Offers: React.FC = () => {
   const cards = [
@@ -154,7 +155,9 @@ const Offers: React.FC = () => {
                     {item.dailyPlacesVisit}
                   </p>
                 </div>
-                <Button text="Make A Reservation" />
+                <Link to="contacts" smooth={true} duration={500}>
+                  <Button text="Make A Reservation" />
+                </Link>
               </div>
             </div>
           </SwiperSlide>
@@ -230,7 +233,9 @@ const Offers: React.FC = () => {
                     {item.dailyPlacesVisit}
                   </p>
                 </div>
-                <Button text="Make A Reservation" />
+                <Link to="contacts" smooth={true} duration={500}>
+                  <Button text="Make A Reservation" />
+                </Link>
               </div>
             </div>
           </SwiperSlide>

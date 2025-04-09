@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import bgImg from "../../public/images/reservationBgImg/bg.png";
 import Button from "@/components/button";
 import Cards from "@/components/cards";
+import { Link } from "react-scroll";
 
 export default function Reservation() {
   return (
@@ -19,7 +21,9 @@ export default function Reservation() {
         <p className="text-white text-6xl font-semibold max-md:text-5xl">
           Make Your Reservation
         </p>
-        <Button text="Discover More" />
+        <Link to="contacts" smooth={true} duration={500}>
+          <Button text="Discover More" />
+        </Link>
       </div>
       <Cards className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 max-xl:mt-40" />
     </div>

@@ -1,3 +1,4 @@
+"use client";
 import SectionTitle from "@/components/sectionTitle";
 import img1 from "../../public/images/destinationImages/afr.jpg.png";
 import img2 from "../../public/images/destinationImages/airplane.jpg.png";
@@ -9,6 +10,7 @@ import Image from "next/image";
 import Button from "@/components/button";
 
 import { User, Globe, House, ArrowRight } from "lucide-react";
+import { Link } from "react-scroll";
 
 export default function Destinations() {
   const card = [
@@ -87,7 +89,9 @@ export default function Destinations() {
                   <p className="font-bold text-xl">{item.title}</p>
                   <p className="text-gray-400 text-lg">{item.underTitle}</p>
                 </div>
-                <Button text="Explore More" />
+                <Link to="contacts" smooth={true} duration={500}>
+                  <Button text="Explore More" />
+                </Link>
               </div>
               <p className="text-gray-400 text-lg">{item.description}</p>
             </div>
@@ -109,7 +113,9 @@ export default function Destinations() {
                   <p className="font-bold text-xl">{item.title}</p>
                   <p className="text-gray-400 text-lg">{item.underTitle}</p>
                 </div>
-                <Button text="Explore More" />
+                <Link to="contacts" smooth={true} duration={500}>
+                  <Button text="Explore More" />
+                </Link>
               </div>
               <p className="text-gray-400 text-lg">{item.description}</p>
               <div className="flex justify-between border-y py-4 border-y-gray-300">

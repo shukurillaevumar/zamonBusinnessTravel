@@ -1,6 +1,8 @@
+"use client";
 import Button from "@/components/button";
 import bgImg from "../../public/images/footerBg/Background.png";
 import Image from "next/image";
+import { Link } from "react-scroll";
 export default function Footer() {
   return (
     <div className="relative w-full mt-20">
@@ -14,7 +16,9 @@ export default function Footer() {
             Make A Reservation By Clicking The Button
           </p>
         </div>
-        <Button text="Book Yours Now" />
+        <Link to="contacts" smooth={true} duration={500}>
+          <Button text="Book Yours Now" />
+        </Link>
       </div>
       <p className="bg-cyan-700 text-white p-7 text-xl font-semibold text-center max-lg:text-sm">
         Copyright 2025 by Muhammadumar. All rights reserved
