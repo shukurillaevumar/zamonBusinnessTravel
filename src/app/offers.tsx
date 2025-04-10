@@ -18,75 +18,78 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import Button from "@/components/button";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
+import "../app/i18n";
 
 const Offers: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const cards = [
     {
       img: img1,
-      title: "Dubai",
+      title: t("OffersCityName"),
       price: "$700",
-      checkIns: "300 Check Ins",
-      subtitle: "Deal Includes:",
-      tripsQuantity: "5 Days Trip > Hotel Included",
-      airPlaneBill: "Airplane Bill Included",
-      dailyPlacesVisit: "Daily Places Visit",
+      checkIns: t("OffersCheckIns"),
+      subtitle: t("OffersIncludes"),
+      tripsQuantity: t("OffersQuantity"),
+      airPlaneBill: t("OffersAirBill"),
+      dailyPlacesVisit: t("OffersDailyPlacesVisit"),
     },
     {
       img: img2,
-      title: "Dubai",
+      title: t("OffersCityName"),
       price: "$700",
-      checkIns: "300 Check Ins",
-      subtitle: "Deal Includes:",
-      tripsQuantity: "5 Days Trip > Hotel Included",
-      airPlaneBill: "Airplane Bill Included",
-      dailyPlacesVisit: "Daily Places Visit",
+      checkIns: t("OffersCheckIns"),
+      subtitle: t("OffersIncludes"),
+      tripsQuantity: t("OffersQuantity"),
+      airPlaneBill: t("OffersAirBill"),
+      dailyPlacesVisit: t("OffersDailyPlacesVisit"),
     },
     {
       img: img3,
-      title: "Dubai",
+      title: t("OffersCityName"),
       price: "$700",
-      checkIns: "300 Check Ins",
-      subtitle: "Deal Includes:",
-      tripsQuantity: "5 Days Trip > Hotel Included",
-      airPlaneBill: "Airplane Bill Included",
-      dailyPlacesVisit: "Daily Places Visit",
+      checkIns: t("OffersCheckIns"),
+      subtitle: t("OffersIncludes"),
+      tripsQuantity: t("OffersQuantity"),
+      airPlaneBill: t("OffersAirBill"),
+      dailyPlacesVisit: t("OffersDailyPlacesVisit"),
     },
     {
       img: img1,
-      title: "Dubai",
+      title: t("OffersCityName"),
       price: "$700",
-      checkIns: "300 Check Ins",
-      subtitle: "Deal Includes:",
-      tripsQuantity: "5 Days Trip > Hotel Included",
-      airPlaneBill: "Airplane Bill Included",
-      dailyPlacesVisit: "Daily Places Visit",
+      checkIns: t("OffersCheckIns"),
+      subtitle: t("OffersIncludes"),
+      tripsQuantity: t("OffersQuantity"),
+      airPlaneBill: t("OffersAirBill"),
+      dailyPlacesVisit: t("OffersDailyPlacesVisit"),
     },
     {
       img: img2,
-      title: "Dubai",
+      title: t("OffersCityName"),
       price: "$700",
-      checkIns: "300 Check Ins",
-      subtitle: "Deal Includes:",
-      tripsQuantity: "5 Days Trip > Hotel Included",
-      airPlaneBill: "Airplane Bill Included",
-      dailyPlacesVisit: "Daily Places Visit",
+      checkIns: t("OffersCheckIns"),
+      subtitle: t("OffersIncludes"),
+      tripsQuantity: t("OffersQuantity"),
+      airPlaneBill: t("OffersAirBill"),
+      dailyPlacesVisit: t("OffersDailyPlacesVisit"),
     },
     {
       img: img3,
-      title: "Dubai",
+      title: t("OffersCityName"),
       price: "$700",
-      checkIns: "300 Check Ins",
-      subtitle: "Deal Includes:",
-      tripsQuantity: "5 Days Trip > Hotel Included",
-      airPlaneBill: "Airplane Bill Included",
-      dailyPlacesVisit: "Daily Places Visit",
+      checkIns: t("OffersCheckIns"),
+      subtitle: t("OffersIncludes"),
+      tripsQuantity: t("OffersQuantity"),
+      airPlaneBill: t("OffersAirBill"),
+      dailyPlacesVisit: t("OffersDailyPlacesVisit"),
     },
   ];
   return (
     <div className="mt-15" id="tours">
       <SectionTitle
-        title="Best Weekly Offers In Each City"
-        description="Discover the best weekly offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences."
+        title={t("WeekOffers")}
+        description={t("WeekOffersSubtitle")}
         className="text-center w-1/2 mx-auto"
       />
       <Swiper
@@ -127,7 +130,7 @@ const Offers: React.FC = () => {
                 layout="fill"
                 className="rounded-xl"
               />
-              <div className="bg-white rounded-2xl p-4 absolute top-1/4 shadow-xl w-2/4 right-10 max-xl:w-full max-xl:right-0 max-xl:top-1/3 max-lg:w-1/2 max-lg:top-1/5 max-sm:w-1/2">
+              <div className="bg-white rounded-2xl p-4 absolute top-1/4 shadow-xl w-2/4 right-10 max-xl:w-full max-xl:right-0 max-xl:top-1/3 max-lg:w-1/2 max-lg:top-1/5 max-sm:w-2/3">
                 <div className="flex border-b pb-2 border-b-gray-300">
                   <div className="flex flex-col">
                     <p className="text-xl font-bold">{item.title}</p>
@@ -156,7 +159,7 @@ const Offers: React.FC = () => {
                   </p>
                 </div>
                 <Link to="contacts" smooth={true} duration={500}>
-                  <Button text="Make A Reservation" />
+                  <Button text={t("ReservationButton")} />
                 </Link>
               </div>
             </div>
@@ -206,7 +209,7 @@ const Offers: React.FC = () => {
                 layout="fill"
                 className="rounded-xl"
               />
-              <div className="bg-white rounded-2xl p-4 absolute top-1/4 shadow-xl w-2/4 right-10 max-xl:w-full max-xl:right-0 max-xl:top-1/3 max-lg:w-1/2 max-lg:top-1/5 max-sm:w-1/2">
+              <div className="bg-white rounded-2xl p-4 absolute top-1/4 shadow-xl w-2/4 right-10 max-xl:w-full max-xl:right-0 max-xl:top-1/3 max-lg:w-1/2 max-lg:top-1/5 max-sm:w-2/3">
                 <div className="flex border-b pb-2 border-b-gray-300">
                   <div className="flex flex-col">
                     <p className="text-xl font-bold">{item.title}</p>
@@ -234,7 +237,7 @@ const Offers: React.FC = () => {
                   </p>
                 </div>
                 <Link to="contacts" smooth={true} duration={500}>
-                  <Button text="Make A Reservation" />
+                  <Button text={t("ReservationButton")} />
                 </Link>
               </div>
             </div>
