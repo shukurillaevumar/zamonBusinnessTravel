@@ -133,8 +133,15 @@ export default function Destinations() {
                 </p>
               </div>
               <p className="flex items-center gap-2 text-cyan-700 font-semibold text-lg cursor-pointer">
-                Need Directions ?
-                <ArrowRight className="cursor-pointer hover:translate-x-2 ease-in duration-150" />
+                <Link
+                  to="contacts"
+                  smooth={true}
+                  duration={500}
+                  className="flex items-center"
+                >
+                  Need Directions ?
+                  <ArrowRight className="cursor-pointer hover:translate-x-2 ease-in duration-150" />
+                </Link>
               </p>
             </div>
           </div>

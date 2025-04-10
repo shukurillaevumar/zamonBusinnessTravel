@@ -4,7 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Logo from "../../public/images/zamon.svg.png";
 import { Link } from "react-scroll";
-
+import { useTranslation } from "react-i18next";
+import "./i18n";
 import {
   Instagram,
   Send,
@@ -14,8 +15,22 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Menu() {
+  const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  // Смена языка
+  const languageChanger = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setMenuOpen(false);
+  };
+
+  const languages = [
+    { label: "UZ", code: "uz" },
+    { label: "ENG", code: "en" },
+    { label: "RU", code: "ru" },
+  ];
 
   return (
     <div className="bg-cyan-700 p-3 top-0 sticky z-50">
@@ -30,14 +45,14 @@ export default function Menu() {
           {menuOpen ? <CloseIcon /> : <MenuIcon />}
         </div>
 
-        {/* Навигация для десктопа */}
+        {/* Десктоп-меню */}
         <div className="hidden md:flex items-center gap-6 text-white font-semibold">
           <ul className="flex gap-4">
             {[
-              { name: "Home", id: "home" },
-              { name: "About", id: "about" },
-              { name: "Tours", id: "tours" },
-              { name: "Contacts", id: "contacts" },
+              { name: t("Home"), id: "home" },
+              { name: t("About"), id: "about" },
+              { name: t("Tours"), id: "tours" },
+              { name: t("Contacts"), id: "contacts" },
             ].map(({ name, id }) => (
               <li key={id}>
                 <Link
@@ -53,12 +68,17 @@ export default function Menu() {
           </ul>
 
           <ul className="flex gap-4 items-center">
-            {["UZ", "ENG", "RU"].map((lang) => (
+            {languages.map(({ label, code }) => (
               <li
-                key={lang}
-                className="cursor-pointer hover:border-b-2 hover:border-white transition-all duration-50 ease-in box-border hover:translate-y-[-2px]"
+                key={code}
+                onClick={() => languageChanger(code)}
+                className={`cursor-pointer transition-all duration-50 ease-in box-border hover:translate-y-[-2px] ${
+                  i18n.language === code
+                    ? "border-b-2 border-white font-bold"
+                    : "hover:border-b-2 hover:border-white"
+                }`}
               >
-                {lang}
+                {label}
               </li>
             ))}
             <Instagram className="cursor-pointer" />
@@ -67,7 +87,7 @@ export default function Menu() {
         </div>
       </div>
 
-      {/* Анимированное мобильное меню */}
+      {/* Мобильное меню */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -79,17 +99,17 @@ export default function Menu() {
           >
             <ul className="flex flex-col gap-2">
               {[
-                { name: "Home", id: "home" },
-                { name: "About", id: "about" },
-                { name: "Tours", id: "tours" },
-                { name: "Contacts", id: "contacts" },
+                { name: t("Home"), id: "home" },
+                { name: t("About"), id: "about" },
+                { name: t("Tours"), id: "tours" },
+                { name: t("Contacts"), id: "contacts" },
               ].map(({ name, id }) => (
                 <li key={id} className="text-center">
                   <Link
                     to={`${id}`}
                     smooth={true}
                     duration={500}
-                    onClick={() => setMenuOpen(false)} // Закрытие бургера после клика
+                    onClick={() => setMenuOpen(false)}
                     className="cursor-pointer hover:border-b hover:border-white py-1 transition-all duration-200 ease-in-out"
                   >
                     {name}
@@ -98,12 +118,17 @@ export default function Menu() {
               ))}
             </ul>
             <ul className="flex flex-col gap-2 mt-4">
-              {["UZ", "ENG", "RU"].map((lang) => (
+              {languages.map(({ label, code }) => (
                 <li
-                  key={lang}
-                  className="cursor-pointer hover:border-b hover:border-white py-1 text-center"
+                  key={code}
+                  onClick={() => languageChanger(code)}
+                  className={`cursor-pointer py-1 text-center ${
+                    i18n.language === code
+                      ? "border-b-2 border-white font-bold"
+                      : "hover:border-b hover:border-white"
+                  }`}
                 >
-                  {lang}
+                  {label}
                 </li>
               ))}
               <div className="flex gap-4 mt-2">
