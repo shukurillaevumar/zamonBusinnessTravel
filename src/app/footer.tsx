@@ -3,7 +3,11 @@ import Button from "@/components/button";
 import bgImg from "../../public/images/footerBg/Background.png";
 import Image from "next/image";
 import { Link } from "react-scroll";
+
+import { useTranslation } from "react-i18next";
+import "../app/i18n";
 export default function Footer() {
+  const { t, i18n } = useTranslation();
   return (
     <div className="relative w-full mt-20">
       {/* Фоновое изображение на всю ширину */}
@@ -18,14 +22,14 @@ export default function Footer() {
         <div className="container mx-auto px-4 flex items-center justify-around text-white max-lg:flex-col max-lg:gap-5">
           <div className="flex flex-col gap-4">
             <p className="text-5xl font-bold max-lg:text-4xl max-lg:text-center">
-              Are You Looking To Travel?
+              {t("FooterTitle")}
             </p>
             <p className="text-2xl font-bold max-lg:text-xl max-lg:text-center">
-              Make A Reservation By Clicking The Button
+              {t("FooterSubtitle")}
             </p>
           </div>
           <Link to="contacts" smooth={true} duration={500}>
-            <Button text="Book Yours Now" />
+            <Button text={t("FooterButton")} />
           </Link>
         </div>
       </div>

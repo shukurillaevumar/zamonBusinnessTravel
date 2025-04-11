@@ -4,21 +4,25 @@ interface CardsProps {
 
 import { Phone, Mail, MapPin } from "lucide-react";
 
+import { useTranslation } from "react-i18next";
+import "../app/i18n";
+
 export default function Cards({ className = "" }: CardsProps) {
+  const { t, i18n } = useTranslation();
   const card = [
     {
       icon: Phone,
-      title: "Make a Phone Call",
+      title: t("PhoneCall"),
       description: "+998 99 299 99 96",
     },
     {
       icon: Mail,
-      title: "Contact Us via Email",
+      title: t("ContactEmail"),
       description: "zamonbiznestour@mail.ru",
     },
     {
       icon: MapPin,
-      title: "Visit Our Offices",
+      title: t("VisitOffices"),
       description: "15/25, Chilanzar - 9, Tashkent city",
     },
   ];

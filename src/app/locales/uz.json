@@ -33,5 +33,13 @@
   "BestLocations": "Eng yaxshi manzillar",
   "BestLocationsSubtitle": "Har bir shahardagi eng yaxshi takliflarimizni kashf eting, faqat siz uchun. O'zingiz uchun yangi dunyosni oching va misli ko'rilmagan sarguzashtlar ega bo'ling.",
   "ReservationTitle": "O'zingiz yoqtirganingizni tanlang",
-  "ReservationSubtitle": "O'z joyingizni band qiling"
+  "ReservationSubtitle": "O'z joyingizni band qiling",
+  "PhoneCall": "Telefon raqam",
+  "ContactEmail": "Bizga email orqali bog'laning",
+  "VisitOffices": "Ofisimizga tashrif buyuring",
+  "ReservationTitlePage": "O'z joyingizni band qiling",
+  "ReservationButtonPage": "Band Qilish",
+  "FooterTitle": "Sayohat qilishni xohlaysizmi?",
+  "FooterSubtitle": "Unda biz bilan hoziroq bog'laning",
+  "FooterButton": "Boglanish"
 }

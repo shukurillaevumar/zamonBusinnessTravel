@@ -3,7 +3,11 @@ import Button from "@/components/button";
 import axios from "axios";
 import { useState, useRef, useEffect } from "react";
 
+import { useTranslation } from "react-i18next";
+import "../app/i18n";
+
 export default function Form() {
+  const { t, i18n } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [modalText, setModalText] = useState<string>("");
   const modalRef = useRef<HTMLDivElement | null>(null);
@@ -83,8 +87,7 @@ export default function Form() {
         </div>
       )}
       <p className="text-4xl text-center font-semibold">
-        Make Your <span className="text-cyan-700">Reservation</span> Through
-        This <span className="text-cyan-700">Form</span>
+        {t("ReservationTitlePage")}
       </p>
       <form
         className="mt-15 container mx-auto"
@@ -193,7 +196,7 @@ export default function Form() {
             <option>Dubai</option>
             <option>Shenghen</option>
           </select>
-          <Button text="Make Your Reservation Now" />
+          <Button text={t("ReservationButtonPage")} />
         </div>
       </form>
     </div>
