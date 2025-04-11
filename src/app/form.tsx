@@ -86,9 +86,13 @@ export default function Form() {
         Make Your <span className="text-cyan-700">Reservation</span> Through
         This <span className="text-cyan-700">Form</span>
       </p>
-      <form className="w-full mt-15" id="myForm" onSubmit={SendMessage}>
+      <form
+        className="mt-15 container mx-auto"
+        id="myForm"
+        onSubmit={SendMessage}
+      >
         <div className="flex justify-center gap-10 max-lg:flex-col ">
-          <div className="flex flex-col w-1/3 max-lg:w-full max-lg:px-5">
+          <div className="flex flex-col w-full max-lg:w-full max-lg:px-5">
             <label
               htmlFor="name"
               className="text-lg font-semibold text-gray-400 mb-2"
@@ -118,7 +122,7 @@ export default function Form() {
               required
             />
           </div>
-          <div className="flex flex-col w-1/3 max-lg:w-full max-lg:px-5">
+          <div className="flex flex-col w-full max-lg:w-full max-lg:px-5">
             <label
               htmlFor="selection"
               className="text-lg font-semibold text-gray-400 mb-2"
@@ -151,7 +155,7 @@ export default function Form() {
             />
           </div>
         </div>
-        <div className="flex flex-col w-2/3 mx-auto max-lg:w-full max-lg:px-5">
+        <div className="flex flex-col container mx-auto max-lg:w-full max-lg:px-5">
           <label
             htmlFor="select"
             className="text-lg font-semibold text-gray-400 mb-2 mt-5"

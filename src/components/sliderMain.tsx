@@ -81,7 +81,7 @@ export default function Slider() {
     },
   ];
   return (
-    <div className="w-full h-screen" id="home">
+    <div className=" w-full h-screen" id="home">
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -110,7 +110,7 @@ export default function Slider() {
               </div>
 
               {/* Статистика */}
-              <div className="bg-white p-5 rounded-full w-1/2 absolute bottom-1/2  transform left-1/2 -translate-x-1/2 translate-y-80 z-10 max-2xl:w-full max-md:max-h-20 max-sm:max-h-42 max-lg:rounded-xl max-md:p-2 max-sm:bottom-1/2">
+              <div className="bg-white p-5 rounded-full w-1/2 absolute bottom-1/2 transform left-1/2 -translate-x-1/2 translate-y-80 z-10 max-sm:w-full max-2xl:w-auto max-md:max-h-20 max-sm:max-h-42 max-2xl:rounded-xl max-md:p-2 max-sm:bottom-1/2">
                 <div className="flex justify-between items-center flex-wrap max-md:gap-5">
                   {slide.stats.map((stat, statIndex) => (
                     <div

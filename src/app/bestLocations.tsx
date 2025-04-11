@@ -9,7 +9,11 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
+
+import { useTranslation } from "react-i18next";
+import "../app/i18n";
 export default function BestLocation() {
+  const { t, i18n } = useTranslation();
   const card = [
     { img: img1 },
     { img: img2 },
@@ -19,10 +23,10 @@ export default function BestLocation() {
     { img: img3 },
   ];
   return (
-    <div className="mt-15">
+    <div className="mt-15 container mx-auto">
       <SectionTitle
-        title="Best Locations"
-        description="Discover the best offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences."
+        title={t("BestLocations")}
+        description={t("BestLocationsSubtitle")}
         className="text-center mx-auto w-1/2"
       />
       <Swiper

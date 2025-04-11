@@ -12,71 +12,72 @@ import Button from "@/components/button";
 import { User, Globe, House, ArrowRight } from "lucide-react";
 import { Link } from "react-scroll";
 
+import { useTranslation } from "react-i18next";
+import "../app/i18n";
+
 export default function Destinations() {
+  const { t, i18n } = useTranslation();
   const card = [
     {
       img: img1,
-      title: "Cheap Railway Tickets With Us",
-      underTitle: "Whole world",
-      description:
-        "Embark on a railway adventure and explore destinations worldwide. Whether it's thepicturesque landscapes, bustling cities, or cultural gems, our rail services offer a unique andcomfortable way to traverse the globe. Immerse yourself in the beauty of different cultures, allaccessible through our extensive railway network. .",
+      title: t("DestinationsCardTitle"),
+      underTitle: t("DestinationsCardSubtitle"),
+      description: t("DestinationsCardDescription"),
     },
     {
       img: img2,
-      title: "Cheap Railway Tickets With Us",
-      underTitle: "Whole world",
-      description:
-        "Embark on a railway adventure and explore destinations worldwide. Whether it's thepicturesque landscapes, bustling cities, or cultural gems, our rail services offer a unique andcomfortable way to traverse the globe. Immerse yourself in the beauty of different cultures, allaccessible through our extensive railway network. .",
+      title: t("DestinationsCardTitle"),
+      underTitle: t("DestinationsCardSubtitle"),
+      description: t("DestinationsCardDescription"),
     },
   ];
 
   const card2 = [
     {
       img: img3,
-      title: "Cheap Railway Tickets With Us",
-      underTitle: "Whole world",
-      description:
-        "Embark on a railway adventure and explore destinations worldwide. Whether it's thepicturesque landscapes, bustling cities, or cultural gems, our rail services offer a unique andcomfortable way to traverse the globe. Immerse yourself in the beauty of different cultures, allaccessible through our extensive railway network. .",
+      title: t("DestinationsCardTitle"),
+      underTitle: t("DestinationsCardSubtitle"),
+      description: t("DestinationsCardDescription"),
       population: "8.66 Mil People",
       territory: "41.290 km2",
       price: "$1.100.200",
     },
     {
       img: img4,
-      title: "Cheap Railway Tickets With Us",
-      underTitle: "Whole world",
-      description:
-        "Embark on a railway adventure and explore destinations worldwide. Whether it's thepicturesque landscapes, bustling cities, or cultural gems, our rail services offer a unique andcomfortable way to traverse the globe. Immerse yourself in the beauty of different cultures, allaccessible through our extensive railway network. .",
+      title: t("DestinationsCardTitle"),
+      underTitle: t("DestinationsCardSubtitle"),
+      description: t("DestinationsCardDescription"),
       population: "8.66 Mil People",
       territory: "41.290 km2",
       price: "$1.100.200",
     },
     {
       img: img5,
-      title: "Cheap Railway Tickets With Us",
-      underTitle: "Whole world",
-      description:
-        "Embark on a railway adventure and explore destinations worldwide. Whether it's thepicturesque landscapes, bustling cities, or cultural gems, our rail services offer a unique andcomfortable way to traverse the globe. Immerse yourself in the beauty of different cultures, allaccessible through our extensive railway network. .",
+      title: t("DestinationsCardTitle"),
+      underTitle: t("DestinationsCardSubtitle"),
+      description: t("DestinationsCardDescription"),
       population: "8.66 Mil People",
       territory: "41.290 km2",
       price: "$1.100.200",
     },
     {
       img: img6,
-      title: "Cheap Railway Tickets With Us",
-      underTitle: "Whole world",
-      description:
-        "Embark on a railway adventure and explore destinations worldwide. Whether it's thepicturesque landscapes, bustling cities, or cultural gems, our rail services offer a unique andcomfortable way to traverse the globe. Immerse yourself in the beauty of different cultures, allaccessible through our extensive railway network. .",
+      title: t("DestinationsCardTitle"),
+      underTitle: t("DestinationsCardSubtitle"),
+      description: t("DestinationsCardDescription"),
       population: "8.66 Mil People",
       territory: "41.290 km2",
       price: "$1.100.200",
     },
   ];
   return (
-    <div className="mt-15 w-2/3 mx-auto max-xl:w-full max-md:p-2" id="about">
+    <div
+      className="mt-15 container mx-auto max-xl:w-full max-md:p-2"
+      id="about"
+    >
       <SectionTitle
-        title="Explore Destinations with Ease"
-        description="Find the best deals on railway and airplane tickets in each city, carefully selected for you."
+        title={t("ExploreDestinations")}
+        description={t("ExploreDestinationsSubtitle")}
         className="flex flex-col w-1/2 max-lg:text-center max-lg:mx-auto max-lg:w-full"
       />
       <div className="flex flex-col mt-10 gap-10">
@@ -90,7 +91,7 @@ export default function Destinations() {
                   <p className="text-gray-400 text-lg">{item.underTitle}</p>
                 </div>
                 <Link to="contacts" smooth={true} duration={500}>
-                  <Button text="Explore More" />
+                  <Button text={t("ExploreMoreButton")} />
                 </Link>
               </div>
               <p className="text-gray-400 text-lg">{item.description}</p>
@@ -99,8 +100,8 @@ export default function Destinations() {
         ))}
       </div>
       <SectionTitle
-        title="Visit One Of Our Countries Now"
-        description="Discover the best offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences."
+        title={t("VisitCountries")}
+        description={t("VisitCountriesSubtitle")}
         className="flex flex-col w-1/2 max-lg:text-center max-lg:mx-auto max-lg:w-full mt-15"
       />
       <div className="flex flex-col mt-10 gap-10">
@@ -119,7 +120,7 @@ export default function Destinations() {
                   <p className="text-gray-400 text-lg">{item.underTitle}</p>
                 </div>
                 <Link to="contacts" smooth={true} duration={500}>
-                  <Button text="Explore More" />
+                  <Button text={t("ExploreMoreButton")} />
                 </Link>
               </div>
               <p className="text-gray-400 text-lg">{item.description}</p>

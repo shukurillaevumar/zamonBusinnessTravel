@@ -86,7 +86,7 @@ const Offers: React.FC = () => {
     },
   ];
   return (
-    <div className="mt-15" id="tours">
+    <div className="container mx-auto mt-15" id="tours">
       <SectionTitle
         title={t("WeekOffers")}
         description={t("WeekOffersSubtitle")}
@@ -166,8 +166,8 @@ const Offers: React.FC = () => {
         ))}
       </Swiper>
       <SectionTitle
-        title="Visa support"
-        description="Experience stress-free travel with our expert visa support. We provide seamless assistance and comprehensive guidance, ensuring a smooth journey."
+        title={t("VisaSupport")}
+        description={t("VisaSupportSubtitle")}
         className="w-1/2 mx-auto text-center mt-15 max-lg:w-2/3"
       />
       <Swiper
