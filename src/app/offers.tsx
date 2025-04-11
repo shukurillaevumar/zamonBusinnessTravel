@@ -90,7 +90,7 @@ const Offers: React.FC = () => {
       <SectionTitle
         title={t("WeekOffers")}
         description={t("WeekOffersSubtitle")}
-        className="text-center w-1/2 mx-auto"
+        className="text-center w-1/2 mx-auto max-lg:w-2/3"
       />
       <Swiper
         slidesPerView={3}
@@ -112,7 +112,7 @@ const Offers: React.FC = () => {
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
           1024: {
             slidesPerView: 3,
@@ -122,15 +122,14 @@ const Offers: React.FC = () => {
       >
         {cards.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-[550px]">
+            <div className="relative w-[500px] h-[400px] max-xl:w-full">
               <Image
                 src={item.img}
                 alt="Offer1"
-                objectFit="cover"
-                layout="fill"
-                className="rounded-xl"
+                fill
+                className="object-cover"
               />
-              <div className="bg-white rounded-2xl p-4 absolute top-1/4 shadow-xl w-2/4 right-10 max-xl:w-full max-xl:right-0 max-xl:top-1/3 max-lg:w-1/2 max-lg:top-1/5 max-sm:w-2/3">
+              <div className="bg-white rounded-2xl p-4 absolute top-5 shadow-xl w-2/4 right-2 max-xl:w-2/3 max-xl:right-15 max-xl:top-2 max-lg:w-2/3 max-lg:top-5 max-lg:right-15 max-sm:w-2/3 max-sm:right-1/6">
                 <div className="flex border-b pb-2 border-b-gray-300">
                   <div className="flex flex-col">
                     <p className="text-xl font-bold">{item.title}</p>
@@ -169,7 +168,7 @@ const Offers: React.FC = () => {
       <SectionTitle
         title="Visa support"
         description="Experience stress-free travel with our expert visa support. We provide seamless assistance and comprehensive guidance, ensuring a smooth journey."
-        className="w-1/2 mx-auto text-center mt-15"
+        className="w-1/2 mx-auto text-center mt-15 max-lg:w-2/3"
       />
       <Swiper
         slidesPerView={3}
@@ -201,7 +200,7 @@ const Offers: React.FC = () => {
       >
         {cards.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-[550px]">
+            <div className="relative w-[500px] h-[400px] max-xl:w-full ">
               <Image
                 src={item.img}
                 alt="Offer1"
@@ -209,7 +208,7 @@ const Offers: React.FC = () => {
                 layout="fill"
                 className="rounded-xl"
               />
-              <div className="bg-white rounded-2xl p-4 absolute top-1/4 shadow-xl w-2/4 right-10 max-xl:w-full max-xl:right-0 max-xl:top-1/3 max-lg:w-1/2 max-lg:top-1/5 max-sm:w-2/3">
+              <div className="bg-white rounded-2xl p-4 absolute top-5 shadow-xl w-2/4 right-2 max-xl:w-2/3 max-xl:right-15 max-xl:top-2 max-lg:w-2/3 max-lg:top-5 max-lg:right-15 max-sm:w-2/3 max-sm:right-1/6">
                 <div className="flex border-b pb-2 border-b-gray-300">
                   <div className="flex flex-col">
                     <p className="text-xl font-bold">{item.title}</p>

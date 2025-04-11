@@ -55,7 +55,7 @@ export default function BestLocation() {
       >
         {card.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-[550px]">
+            <div className="relative w-[500px] h-[400px] max-xl:w-full">
               <Image
                 src={item.img}
                 alt="Offer1"

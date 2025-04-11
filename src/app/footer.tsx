@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 export default function Footer() {
   return (
     <div className="relative w-full mt-20">
-      <Image src={bgImg} alt="img" className="max-lg:h-[300px]" />
+      <Image src={bgImg} alt="img" className="max-xl:h-[300px]" />
       <div className="absolute top-2/5 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white flex items-center justify-around w-full max-lg:flex-col max-lg:gap-5">
         <div className="flex flex-col gap-4">
           <p className="text-5xl font-bold max-lg:text-4xl max-lg:text-center">

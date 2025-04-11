@@ -34,7 +34,7 @@ export default function Menu() {
 
   return (
     <div className="bg-cyan-700 p-3 top-0 sticky z-50">
-      <div className="flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between">
         <Image src={Logo} alt="img" className="w-28 h-auto" />
 
         {/* Бургер-иконка */}

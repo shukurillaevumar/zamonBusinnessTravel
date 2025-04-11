@@ -110,7 +110,7 @@ export default function Slider() {
               </div>
 
               {/* Статистика */}
-              <div className="bg-white p-5 rounded-full w-1/2 absolute top-1/2 transform left-1/2 -translate-x-1/2 translate-y-80 z-10 max-2xl:w-full max-md:top-40 max-md:rounded-xl max-md:p-2">
+              <div className="bg-white p-5 rounded-full w-1/2 absolute bottom-1/2  transform left-1/2 -translate-x-1/2 translate-y-80 z-10 max-2xl:w-full max-md:max-h-20 max-sm:max-h-42 max-lg:rounded-xl max-md:p-2 max-sm:bottom-1/2">
                 <div className="flex justify-between items-center flex-wrap max-md:gap-5">
                   {slide.stats.map((stat, statIndex) => (
                     <div
@@ -130,7 +130,12 @@ export default function Slider() {
                       </div>
                     </div>
                   ))}
-                  <Link to="about" smooth={true} duration={500}>
+                  <Link
+                    to="about"
+                    smooth={true}
+                    duration={500}
+                    className="max-sm:mx-auto"
+                  >
                     <Button text={`${t("ExploreMoreButton")}`} />
                   </Link>
                 </div>

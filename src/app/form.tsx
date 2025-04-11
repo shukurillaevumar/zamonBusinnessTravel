@@ -96,7 +96,7 @@ export default function Form() {
               Your Name
             </label>
             <input
-              className="p-4 border border-gray-400 rounded-full text-lg"
+              className="p-4 border border-gray-400 rounded-full text-lg max-sm:p-2"
               type="text"
               placeholder="Ex. John Smithee"
               id="name"
@@ -111,7 +111,7 @@ export default function Form() {
             </label>
             <input
               type="number"
-              className="p-4 border border-gray-400 rounded-full text-lg"
+              className="p-4 border border-gray-400 rounded-full text-lg max-sm:p-2"
               placeholder="Ex. +99897 006 96 56"
               id="number"
               name="number"
@@ -128,7 +128,7 @@ export default function Form() {
             <select
               id="selection"
               name="selection"
-              className="p-4 border border-gray-400 rounded-full text-lg"
+              className="p-4 border border-gray-400 rounded-full text-lg max-sm:p-2"
               required
             >
               <option value="1">1</option>
@@ -146,7 +146,7 @@ export default function Form() {
               type="date"
               id="date"
               name="date"
-              className="p-4 border border-gray-400 rounded-full text-lg"
+              className="p-4 border border-gray-400 rounded-full text-lg max-sm:p-2"
               required
             />
           </div>
@@ -161,7 +161,7 @@ export default function Form() {
           <select
             id="select"
             name="select"
-            className="p-4 border border-gray-400 rounded-full text-lg"
+            className="p-4 border border-gray-400 rounded-full text-lg max-sm:p-2"
             required
           >
             <option>Antalya</option>
@@ -180,7 +180,7 @@ export default function Form() {
           <select
             id="visa"
             name="visa"
-            className="p-4 border border-gray-400 rounded-full text-lg mb-8"
+            className="p-4 border border-gray-400 rounded-full text-lg mb-8 max-sm:p-2"
             required
           >
             <option>USA</option>

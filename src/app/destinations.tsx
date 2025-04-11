@@ -73,16 +73,16 @@ export default function Destinations() {
     },
   ];
   return (
-    <div className="mt-15 w-2/3 mx-auto max-md:w-full max-md:p-2" id="about">
+    <div className="mt-15 w-2/3 mx-auto max-xl:w-full max-md:p-2" id="about">
       <SectionTitle
         title="Explore Destinations with Ease"
         description="Find the best deals on railway and airplane tickets in each city, carefully selected for you."
-        className="flex flex-col w-1/2 max-md:text-center"
+        className="flex flex-col w-1/2 max-lg:text-center max-lg:mx-auto max-lg:w-full"
       />
       <div className="flex flex-col mt-10 gap-10">
         {card.map((item, index) => (
           <div className="flex gap-5 items-center max-lg:flex-col" key={index}>
-            <Image src={item.img} alt="img" width={400} />
+            <Image src={item.img} alt="img" className="min-w-[400px]" />
             <div className="flex flex-col gap-5">
               <div className="flex items-center justify-between">
                 <div className="flex flex-col">
@@ -101,12 +101,17 @@ export default function Destinations() {
       <SectionTitle
         title="Visit One Of Our Countries Now"
         description="Discover the best offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences."
-        className="w-1/2 mt-15"
+        className="flex flex-col w-1/2 max-lg:text-center max-lg:mx-auto max-lg:w-full mt-15"
       />
       <div className="flex flex-col mt-10 gap-10">
         {card2.map((item, index) => (
           <div className="flex gap-5 items-start max-lg:flex-col" key={index}>
-            <Image src={item.img} alt="img" width={400} objectFit="cover" />
+            <Image
+              src={item.img}
+              alt="img"
+              className="max-xl:min-w-80"
+              objectFit="cover"
+            />
             <div className="flex flex-col gap-5">
               <div className="flex items-center justify-between">
                 <div className="flex flex-col">
@@ -119,15 +124,15 @@ export default function Destinations() {
               </div>
               <p className="text-gray-400 text-lg">{item.description}</p>
               <div className="flex justify-between border-y py-4 border-y-gray-300">
-                <p className="flex items-center gap-2 text-lg text-gray-400 font-semibold">
+                <p className="flex items-center gap-2 text-lg text-gray-400 font-semibold max-sm:flex-col">
                   <User />
                   {item.population}
                 </p>
-                <p className="flex items-center gap-2 text-lg text-gray-400 font-semibold">
+                <p className="flex items-center gap-2 text-lg text-gray-400 font-semibold  max-sm:flex-col">
                   <Globe />
                   {item.territory}
                 </p>
-                <p className="flex items-center gap-2 text-lg text-gray-400 font-semibold">
+                <p className="flex items-center gap-2 text-lg text-gray-400 font-semibold  max-sm:flex-col">
                   <House />
                   {item.price}
                 </p>
