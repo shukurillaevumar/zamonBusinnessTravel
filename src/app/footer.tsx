@@ -35,7 +35,7 @@ export default function Footer() {
       </div>
 
       {/* Нижний текст */}
-      <p className="bg-cyan-700 text-white p-7 text-xl font-semibold text-center max-lg:text-sm">
+      <p className="bg-[#22B3C1] text-white p-7 text-xl font-semibold text-center max-lg:text-sm">
         Copyright 2025 by Muhammadumar. All rights reserved
       </p>
     </div>

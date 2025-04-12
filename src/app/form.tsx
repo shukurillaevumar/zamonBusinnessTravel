@@ -90,7 +90,7 @@ export default function Form() {
         {t("ReservationTitlePage")}
       </p>
       <form
-        className="mt-15 container mx-auto"
+        className="mt-15 container mx-auto px-10"
         id="myForm"
         onSubmit={SendMessage}
       >

@@ -33,7 +33,7 @@ export default function Menu() {
   ];
 
   return (
-    <div className="bg-cyan-700 p-3 top-0 sticky z-50">
+    <div className="bg-[#22B3C1] p-3 top-0 sticky z-50">
       <div className="container mx-auto flex items-center justify-between">
         <Link to="home" smooth={true} duration={500}>
           <Image src={Logo} alt="img" className="w-38 h-auto cursor-pointer" />

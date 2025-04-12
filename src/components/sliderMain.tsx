@@ -134,7 +134,7 @@ export default function Slider() {
                     to="about"
                     smooth={true}
                     duration={500}
-                    className="max-sm:mx-auto"
+                    className="max-2xl:mx-auto"
                   >
                     <Button text={`${t("ExploreMoreButton")}`} />
                   </Link>

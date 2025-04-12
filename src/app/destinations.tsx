@@ -84,7 +84,7 @@ export default function Destinations() {
         {card.map((item, index) => (
           <div className="flex gap-5 items-center max-lg:flex-col" key={index}>
             <Image src={item.img} alt="img" className="min-w-[400px]" />
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 w-full">
               <div className="flex items-center justify-between">
                 <div className="flex flex-col">
                   <p className="font-bold text-xl">{item.title}</p>
@@ -113,8 +113,8 @@ export default function Destinations() {
               className="max-xl:min-w-80"
               objectFit="cover"
             />
-            <div className="flex flex-col gap-5">
-              <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-5 w-full">
+              <div className="flex items-center justify-between ">
                 <div className="flex flex-col">
                   <p className="font-bold text-xl">{item.title}</p>
                   <p className="text-gray-400 text-lg">{item.underTitle}</p>
